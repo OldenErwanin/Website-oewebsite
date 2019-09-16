@@ -1,0 +1,138 @@
+.writenewsPage textarea {
+  resize: none;
+  width: 700px;
+  height: 350px;
+  background-color: var(--color-Button);
+  border: 1px solid var(--color-DefBorder);
+  border-radius: 0 0 5px 5px;
+  font-family: Catamaran;
+  font-size: 16px;
+  color: var(--color-LightFont);
+}
+
+.writenewsPage .editorButtons {
+  width: 704px;
+  margin-left: 47px;
+  height: 45px;
+  background-color: #444;
+  border: 1px solid var(--color-DefBorder);
+  border-radius: 5px 5px 0 0;
+}
+.writenewsPage .editorButtons input {
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid var(--color-DefBorder);
+  border-radius: 8px;
+}
+.writenewsPage .editorButtons input:hover {
+  border: 2px solid var(--color-webOrangeDark);
+}
+
+.writenewsPage .container {
+  width: 800px;
+  margin: 50px 100px;
+  text-align: center;
+}
+
+.writenewsPage form input[type="text"] {
+  height: 25px;
+  margin-top: -5px;
+  margin-left: -5px;
+  padding: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-webOrangeDark);
+  outline: none;
+}
+
+.writenewsPage form table {
+  width: 300px;
+  margin: 10px auto;
+  text-align: center;
+}
+.writenewsPage form table .text {
+  width: 40px;
+  margin-left: 15px;
+  float: left;
+}
+.writenewsPage form table .data {
+  width: 50px;
+  margin-top: -15px;
+  margin-left: -20px;
+  float: left;
+}
+
+.writenewsPage form table td.title {
+  width: 100px;
+  float: left;
+}
+.writenewsPage form table label {
+  font-family: Catamaran;
+  font-size: 20px;
+  color: rgb(80, 80, 80);
+}
+
+.writenewsPage form #featuredDate {
+  display: none;
+  margin: 0 auto;
+  margin-top: -30px;
+  padding-bottom: 20px;
+}
+
+.editnewsPage .container {
+  width: 800px;
+  margin: 50px 100px;
+  text-align: center;
+}
+
+.editnewsPage form input[type="text"] {
+  height: 25px;
+  margin-top: -5px;
+  margin-left: -5px;
+  padding: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-webOrangeDark);
+  outline: none;
+}
+
+.editnewsPage form table {
+  width: 300px;
+  margin: 10px auto;
+  text-align: center;
+}
+.editnewsPage form table .text {
+  width: 40px;
+  margin-left: 15px;
+  float: left;
+}
+.editnewsPage form table .data {
+  width: 50px;
+  margin-top: -15px;
+  margin-left: -20px;
+  float: left;
+}
+
+.editnewsPage form table td.title {
+  width: 100px;
+  float: left;
+}
+.editnewsPage form table label {
+  font-family: Catamaran;
+  font-size: 20px;
+  color: rgb(80, 80, 80);
+}
+
+.editnewsPage form #efeaturedDate {
+  display: none;
+  margin: 0 auto;
+  margin-top: -30px;
+  padding-bottom: 20px;
+}

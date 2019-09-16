@@ -1,0 +1,2337 @@
+/* ---------------- */
+
+/* WEBSITE SETTINGS */
+
+/* ---------------- */
+
+:root {
+    --color-lightBG: #444;
+    --color-darkBG: #222;
+    --color-link: #f78d2b;
+    --color-hoverLink: #b8681e;
+    --color-DefBorder: rgba(255, 255, 255, 0.5);
+    --color-LightFont: rgba(255, 255, 255, 0.8);
+    --color-LighterFont: rgba(255, 255, 255, 0.5);
+    --color-Button: #555;
+    --color-webOrangeDark: #b6621f;
+    --color-webOrangeLight: #da792a;
+}
+
+body {
+    height: 100%;
+    background: rgb(193, 193, 193);
+    background: linear-gradient(0deg, rgb(211, 211, 211) 0%, rgb(168, 168, 168) 35%, rgb(94, 94, 94) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo-container {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.logo {
+    width: 80px;
+    float: left;
+    margin-left: calc(50% - 140px);
+}
+
+.logo-title {
+    margin: 15px 10px;
+    height: 80px;
+    float: left;
+    font-family: Catamaran;
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 1000px) {
+    .wrapper {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    .logo-container {
+        width: 50%;
+        margin-top: 20px;
+        float: left;
+    }
+}
+
+
+/* ----------- */
+
+/* ABOVE PAGES */
+
+/* ----------- */
+
+#aPageLogin {
+    width:100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1001;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#aPageForgottenPwd {
+  width:100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#aPageConfirmNewsDelete {
+  width:100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#aPageConfirmCategoryDelete {
+  width:100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#aPageConfirmMessageDelete {
+  width:100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#aPageConfirmFriendDelete {
+  width:100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#aPageLogin .btn-Close, #aPageForgottenPwd .btn-Close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#aPageLogin .form-Signin, #aPageForgottenPwd .form-ResetRequest {
+    width: 300px;
+    height: fit-content;
+    overflow: hidden;
+    margin: 300px auto;
+    padding: 10px 15px;
+    background-color: var(--color-darkBG);
+    border: 1px solid rgba(200, 200, 200, 0.5);
+    border-radius: 5px;
+    text-align: center;
+}
+
+#aPageLogin .form-Signin label, #aPageForgottenPwd .form-ResetRequest label {
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--color-LightFont);
+    font-family: Catamaran;
+    font-size: 18px;
+    color: var(--color-LightFont);
+}
+
+#aPageLogin .form-Signin input, #aPageForgottenPwd .form-ResetRequest input {
+    width: 300px;
+    height: 45px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+#aPageLogin .form-Signin input[type="password"] {
+    width: 255px;
+    height: 45px;
+    margin-bottom: 5px;
+    border-radius: 5px 0 0 5px;
+}
+#aPageForgottenPwd .form-ResetRequest input[type="email"] {
+  width: 94%;
+  height: 45px;
+  margin: 5px 3%;
+  border-radius: 5px;
+}
+
+#aPageLogin .form-Signin button[type="submit"] {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 5px;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    padding: 0;
+}
+#aPageForgottenPwd .form-ResetRequest button[type="submit"] {
+  width: 100px;
+  height: 40px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 0;
+}
+
+#aPageForgottenPwd .form-ResetRequest p {
+  float: left;
+  font-family: Catamaran;
+  font-size: 16px;
+  margin: 10px 0;
+  color: var(--color-LightFont);
+}
+
+#aPageLogin .form-Signin img {
+    width: 35px;
+    margin-left: 5px;
+    float: left;
+}
+
+
+/* ----- */
+
+
+/* TOOLS */
+
+
+/* ----- */
+
+.block-title {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid white;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    width: fit-content;
+    padding: 10px 10px;
+    margin: 0 auto;
+    font-family: Catamaran;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--color-darkBG);
+}
+
+input {
+    height: 40px;
+    padding: 0;
+    background-color: var(--color-lightBG);
+    border: 1px solid var(--color-DefBorder);
+    border-radius: 5px;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Catamaran;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-LighterFont);
+}
+
+input[type="radio"] {
+    float: left;
+    width: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    font-family: Catamaran;
+    font-size: 16px;
+    color: var(--color-LighterFont);
+}
+
+button {
+    width: fit-content;
+    height: 40px;
+    padding: 0 10px;
+    background-color: var(--color-Button);
+    border: 1px solid var(--color-DefBorder);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-LightFont);
+}
+
+.errorField {
+    width: fit-content;
+    max-width: 250px;
+    padding: 5px 15px;
+    margin: 0 auto 10px auto;
+    background-color: rgba(231, 58, 58, 0.4);
+    border: 1px solid rgba(231, 58, 58, 0.7);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.errorField .regError {
+    font-family: Catamaran;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(245, 57, 57, 0.8);
+    text-shadow: 1px 1px 2px rgba(129, 21, 21, 0.842);
+}
+
+.successField {
+    width: fit-content;
+    max-width: 250px;
+    padding: 5px 15px;
+    margin: 0 auto 10px auto;
+    background-color: rgba(55, 185, 43, 0.4);
+    border: 1px solid rgba(50, 196, 58, 0.7);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.successField .regSuccess {
+    font-family: Catamaran;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(60, 216, 73, 0.8);
+    text-shadow: 1px 1px 2px rgba(21, 129, 26, 0.842);
+}
+
+.tooltip {
+    text-decoration:none;
+    position:relative;
+}
+.tooltip span {
+    display:none;
+}
+.tooltip:hover span {
+    display:block;
+    position:fixed;
+    overflow:hidden;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-family: Catamaran;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 7px;
+    z-index: 1002;
+}
+/* ------- */
+
+
+/* ACCOUNT */
+
+
+/* ------- */
+
+header {
+    width: 100%;
+    height: 80vh;
+    background-color: var(--color-darkBG);
+}
+
+.account {
+    padding-top: 15px;
+    width: 100%;
+}
+
+.account .form-webLogin {
+    display: none;
+}
+
+.account .form-Login {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.account .form-Login label {
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--color-LightFont);
+    font-family: Catamaran;
+    font-size: 18px;
+    color: var(--color-LightFont);
+}
+
+.account .form-Login input {
+    width: calc(96% - 2px);
+    margin: 0 2% 5px 2%;
+}
+
+.account .form-Login input[type="password"] {
+    width: calc(96% - 62px);
+    margin: 0 0 10px 2%;
+    float: left;
+    border-radius: 5px 0 0 5px;
+}
+
+.account .form-Login input[type="image"] {
+    float: left;
+    margin: 0;
+    padding: 0 10px;
+    width: 60px;
+    background-color: var(--color-Button);
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.account .form-ForgetPwd button {
+    float: left;
+    width: fit-content;
+    margin: 5px 0 5px 10%;
+    border-radius: 5px 0 0 5px;
+}
+
+.account .form-toSignup button {
+    float: left;
+    width: fit-content;
+    margin: 5px 10% 5px 0;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.account .avatar {
+  width: 55px;
+  float: left;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+.account .info {
+  width: fit-content;
+  min-width: 200px;
+  height: 20px;
+  float: left;
+  margin-left: 5px;
+  padding: 0 10px;
+  line-height: 20px;
+  background-color: var(--color-lightBG);
+  border: 1px solid var(--color-DefBorder);
+  border-radius: 5px;
+  font-family: Catamaran;
+  color: var(--color-LightFont);
+}
+.account .info .uName {
+  color: var(--color-webOrangeLight);
+}
+.account .buttons {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.account .buttons form button {
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin-right: 5px;
+  text-align: center;
+}
+.account .buttons form .btn-logout {
+  float: right;
+  margin-right: 0;
+}
+.account .buttons form button:focus {
+  outline:none;
+}
+.account .buttons form button img {
+  width: 27px;
+  float: left;
+  margin-left: -7px;
+}
+
+@media screen and (min-width: 500px) {
+    header {
+        width: 100%;
+        height: 60vh;
+        background-color: var(--color-darkBG);
+    }
+    .account {
+        width: 490px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header {
+        height: 200px;
+    }
+    .account {
+        width: 50%;
+        float: left;
+        margin-top: 20px;
+    }
+    .account .form-Login {
+        display: none;
+    }
+    .account .form-webLogin {
+        display: block;
+    }
+    .account .form-webLogin button {
+        float: left;
+        border-radius: 5px 0 0 5px;
+        font-size: 20px;
+        background-color: #a55a1d;
+        text-shadow: 1px 1px 2px #3b3b3b;
+        transition: 0.3s;
+    }
+    .account .form-ForgetPwd button {
+        float: left;
+        width: fit-content;
+        margin: 0;
+        border-radius: 0;
+        font-size: 16px;
+        font-weight: 400;
+        border-left: none;
+        border-right: 1px solid var(--color-DefBorder);
+        transition: 0.3s;
+    }
+    .account .form-toSignup button {
+        float: left;
+        width: fit-content;
+        margin: 0;
+        border-radius: 0 5px 5px 0;
+        font-size: 18px;
+        border-left: 2px solid var(--color-DefBorder);
+        transition: 0.3s;
+    }
+    .account button:hover {
+        background-color: #444;
+        color: var(--color-webOrangeDark);
+    }
+    .account .form-webLogin button:hover {
+        background-color: #c76c22;
+        color: #ffa256;
+        text-shadow: 1px 1px 2px #85440f;
+    }
+}
+
+
+/* ----------- */
+
+
+/* SIGNUP PAGE*/
+
+
+/* ----------- */
+
+.signupPage {
+    width: 100%;
+    height: 150vh;
+    padding: 30px auto;
+    background-color: var(--color-darkBG);
+}
+
+.terms {
+    background-color: var(--color-lightBG);
+    width: 100%;
+}
+
+iframe {
+    border: 1px solid var(--color-DefBorder);
+    border-radius: 5px;
+    width: 96%;
+    margin: 20px 2%;
+}
+
+.signupPage .form-Signup {
+    width: 100%;
+    padding-top: 15px;
+}
+
+.signupPage .form-Signup .formTitle {
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--color-LightFont);
+    font-family: Catamaran;
+    font-size: 18px;
+    color: var(--color-LightFont);
+}
+
+.signupPage .form-Signup .radioGender {
+    width: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    font-family: Catamaran;
+    font-size: 16px;
+    color: var(--color-LighterFont);
+}
+
+.signupPage .form-Signup input[type="radio"] {
+    width: 26px;
+    margin: 0;
+}
+
+.signupPage .form-Signup input {
+    width: calc(96% - 2px);
+    margin: 0 2% 5px 2%;
+}
+
+.signupPage .backwardSubmit {
+    float: right;
+    width: 50%;
+    margin: 5px 0 5px 10%;
+    border-radius: 5px 0 0 5px;
+}
+
+.signupPage .form-Signup .regSubmit {
+    float: right;
+    width: 30%;
+    margin: 5px 10% 5px 0;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* TABLE GENDER */
+
+.signupPage .form-Signup .tableGender {
+    border-collapse: collapse;
+    width: 96%;
+    margin: 10px 2%;
+}
+
+.signupPage .form-Signup .tableGender .tableTitle {
+    font-family: Catamaran;
+    font-size: 20px;
+    color: var(--color-LightFont);
+}
+
+.signupPage .form-Signup .tableGender tr {
+    height: 30px;
+}
+
+.signupPage .form-Signup .tableGender td {
+    vertical-align: middle;
+    width: 6%;
+}
+
+
+/* TABLE BIRTHDAY */
+
+.signupPage .form-Signup .tableDate {
+    border-collapse: collapse;
+    width: 96%;
+    margin: 10px calc(2% - 2px);
+}
+
+.signupPage .form-Signup .tableDate .tableTitle {
+    font-family: Catamaran;
+    font-size: 20px;
+    color: var(--color-LightFont);
+}
+
+.signupPage .form-Signup .tableDate tr {
+    height: 30px;
+}
+
+.signupPage .form-Signup .tableDate td {
+    vertical-align: middle;
+    width: 6%;
+}
+
+
+/* TABLE ACCEPT TERMS */
+
+.signupPage .form-Signup .tableTerms {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 18%;
+    margin-bottom: 30px;
+}
+
+.signupPage .form-Signup .tableTerms .tableTitle {
+    font-family: Catamaran;
+    font-size: 20px;
+    color: var(--color-LightFont);
+}
+
+.signupPage .form-Signup .tableTerms tr {
+    height: 30px;
+}
+
+.signupPage .form-Signup .tableTerms td {
+    vertical-align: middle;
+    width: 50%;
+    text-align: center;
+}
+
+.signupPage .form-Signup input[type="checkbox"] {
+    width: 26px;
+}
+
+@media screen and (min-width: 500px) {
+    .signupPage .form-Signup {
+        width: 490px;
+        margin: 0 auto;
+        float: left;
+        margin-top: 20px;
+    }
+    .signupPage .form-Signup .errorField {
+      width: fit-content;
+      float: left;
+
+    }
+    .signupPage .form-Signup .formTitle {
+      margin-top: 40px;
+      margin-left: -60px;
+    }
+    .signupBG {
+      background-color: var(--color-darkBG);
+      width: 100%;
+    }
+}
+
+
+/* NAVIGATION BAR */
+
+nav {
+    width: 100%;
+    height: 300px;
+    margin-top: calc(60vh - 60px);
+}
+
+nav .nav-toggle {
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-right: 10px;
+}
+
+nav .nav-home {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-left: 10px;
+}
+
+nav #toggleMenu {
+    position: relative;
+    z-index: 1000;
+    display: none;
+    float: left;
+    margin-top: 11px;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul {
+    display: block;
+    float: left;
+}
+
+nav ul li {
+    list-style: none;
+    background-color: grey;
+}
+
+nav ul li:last-child {
+    border-bottom: 3px solid white;
+}
+
+nav ul li a {
+    display: block;
+    padding: 5px auto;
+    text-decoration: none;
+    color: var(--color-LightFont);
+    text-shadow: 1px 1px 2px rgba(129, 21, 21, 1);
+    font-family: Catamaran;
+    font-size: 24px;
+    line-height: 40px;
+    height: 40px;
+    background-image: linear-gradient(to right, var(--color-darkBG), var(--color-lightBG), var(--color-darkBG));
+    border-bottom: 1px solid var(--color-DefBorder);
+}
+
+@media screen and (min-width: 450px) {
+    nav {
+        margin-top: calc(60vh - 10px);
+    }
+}
+
+@media screen and (min-width: 500px) {
+    nav {
+        margin-top: calc(50vh - 75px);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    nav {
+        width: 100%;
+        height: 80px;
+        margin: 0;
+        margin-top: 120px;
+        padding: 0;
+        position: relative;
+    }
+    nav .nav-toggle {
+        display: none;
+    }
+
+    nav .nav-home {
+        display: none;
+    }
+
+    nav #toggleMenu {
+        display: block;
+        margin: 0;
+        padding: 0;
+        float: left;
+        position: absolute;
+        bottom: -3px;
+
+    }
+
+    nav ul li {
+        float: left;
+        background-color: grey;
+        width: calc(1000px / 5 - 1px);
+        border-right: 1px solid rgba(200, 200, 200, 0.5);
+        background-image: linear-gradient(to top, var(--color-darkBG), var(--color-lightBG));
+        transition: 0.2s;
+
+    }
+    nav ul li:first-child {
+        border-radius: 8px 0 0 0;
+    }
+    nav ul li:last-child {
+        border-radius: 0 8px 0 0;
+        border-right: none;
+    }
+    nav ul li a {
+        background-image: none;
+        padding: 10px 5px;
+        margin: 0;
+        border-bottom: none;
+        transition: 0.2s;
+    }
+    nav ul li:hover {
+        background-image: linear-gradient(to top, rgb(231, 231, 231), rgb(155, 155, 155), rgb(100, 100, 100), rgb(46, 46, 46));
+    }
+    nav ul li:hover a {
+        color: var(--color-webOrangeDark);
+        text-shadow: 1px 1px 2px #6b3a11;
+    }
+}
+
+
+/* --------- */
+
+
+/* MAIN BODY */
+
+
+/* --------- */
+
+.slider {
+    display: none;
+}
+
+
+/* NEWS */
+
+.news-main {
+    width: 96%;
+    margin: 20px calc(2% - 1px);
+}
+
+.news-main .news-body .bg {
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgba(100, 100, 100, 0.6);
+    border-radius: 5px;
+}
+
+.news-body .bg .data {
+    width: 96%;
+    margin: 5px 2%;
+    background-color: rgb(200, 200, 200);
+    border-radius: 5px;
+}
+
+.news-body .bg .data table {
+    width: 100%;
+}
+
+.news-body .bg .data td {
+    padding: 5px;
+}
+
+.news-body .bg .data .left {
+    text-align: left;
+    width: fit-content;
+}
+
+.news-body .bg .data .left h2 {
+    font-family: Catamaran;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-webOrangeDark);
+}
+
+.news-body .bg .data .left h3 {
+    font-family: Catamaran;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-webOrangeDark);
+}
+
+.news-body .bg .data .left .category {
+    color: var(--color-lightBG);
+}
+
+.news-body .bg .data .left .tumblr {
+    display: none;
+}
+
+.news-body .bg .data .right {
+    width: 20%;
+}
+
+.news-body .bg .data .right .year {
+    background-color: rgb(150, 150, 150);
+    padding: 8px 5px;
+    font-family: Catamaran;
+    font-size: 16px;
+    color: var(--color-LightFont);
+    float: right;
+    margin-top: -1px;
+    border-radius: 5px;
+}
+
+.news-body .bg .data .right .other {
+    background-color: rgb(150, 150, 150);
+    padding: 6px 5px;
+    font-family: Catamaran;
+    font-size: 12px;
+    color: var(--color-LightFont);
+    float: right;
+    margin-top: 3px;
+    border-radius: 0 5px 5px 0;
+    border-left: 1px solid rgb(200, 200, 200);
+}
+.news-body .bg .data .right .featured {
+    background-color: rgb(150, 150, 150);
+    padding: 10px 5px;
+    font-family: Catamaran;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-LightFont);
+    float: right;
+    margin-top: -8px;
+    border-radius: 5px;
+}
+
+.news-body .bg .text {
+    width: 90%;
+    margin: 5px 5%;
+    font-family: Catamaran;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-lightBG);
+}
+
+.news-body .buttons {
+    width: 96%;
+    margin: 0 2%;
+    margin-bottom: 60px;
+}
+
+.news-body .buttons button,
+.news-body .buttons span {
+    margin: 5px 0px;
+    padding: 0 5px;
+    width: fit-content;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: right;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgba(100, 100, 100, 0.6);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-lightBG);
+}
+
+.news-body .buttons .continue {
+    margin-left: 10px;
+    border-color: var(--color-DefBorder);
+    background-color: var(--color-lightBG);
+    color: var(--color-webOrangeLight);
+}
+.news-body .buttons .continue:disabled {
+    margin-left: 10px;
+    border-color: var(--color-DefBorder);
+    background-color: #666;
+    color: rgba(220, 220, 220, 0.5);
+}
+
+.news-body .buttons .comments {
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.news-body .buttons .author {
+    border-radius: 5px 0 0 5px;
+}
+
+.news-body .buttons .author a {
+    text-decoration: none;
+    color: var(--color-webOrangeLight);
+}
+
+.news-body .buttons .views {
+    display: none;
+}
+
+@media screen and (max-width: 360px) {
+    .news-body .buttons .author {
+        border-radius: 5px;
+    }
+    .news-body .buttons .comments {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .news-main {
+        width: 600px;
+        margin: 20px auto;
+    }
+    .news-body .buttons .views {
+        display: block;
+        border-left: none;
+        border-radius: 0;
+    }
+    .news-body .bg .data .left .tumblr {
+        display: block;
+        width: 40px;
+        height: 40px;
+        float: left;
+        background-color: rgb(240, 240, 240);
+        border-radius: 5px;
+        padding: 5px;
+        margin: 2px;
+        margin-right: 10px;
+    }
+    .news-body .bg .data .left h2 {
+        margin-top: 12px;
+    }
+    .news-body .bg .data .right .year {
+        background-color: rgb(150, 150, 150);
+        padding: 12px 5px;
+        font-family: Catamaran;
+        font-size: 20px;
+        color: var(--color-LightFont);
+        float: right;
+        margin-top: -10px;
+        border-radius: 5px;
+    }
+    .news-body .bg .data .right .other {
+        background-color: rgb(150, 150, 150);
+        padding: 10px 5px;
+        font-family: Catamaran;
+        font-size: 16px;
+        color: var(--color-LightFont);
+        float: right;
+        margin-top: -6px;
+        border-radius: 0 5px 5px 0;
+        border-left: 1px solid rgb(200, 200, 200);
+    }
+}
+
+
+/* ------------ */
+
+/* PROFILE PAGE */
+
+/* ------------ */
+
+@media screen and (min-width: 1000px) {
+  .slider {
+      display: block;
+      width: 800px;
+      height: 260px;
+      margin: 10px 100px;
+      border: 3px solid rgb(240, 240, 240);
+      border-radius: 5px;
+      overflow: hidden;
+  }
+  .slider img {
+    border-radius: 5px;
+  }
+  .index {
+    width: 800px;
+    margin: 0 100px;
+    margin-bottom: 40px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid var(--color-DefBorder);
+    border-radius: 5px;
+  }
+  .index .header {
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+    background-color: #777;
+    border-radius: 5px;
+    line-height: 30px;
+    font-family: Catamaran;
+    font-size: 22px;
+    color: var(--color-LightFont);
+  }
+  .index .header span {
+    color: #e09252;
+  }
+  .index p {
+    padding: 10px;
+    font-family: Catamaran;
+    font-size: 18px;
+    color: #444;
+  }
+  .index ul {
+    margin-left: 35px;
+    font-family: Catamaran;
+    font-size: 18px;
+    color: #444;
+  }
+  /* VIEW PROFILE */
+  .profilePage .profile-Menu{
+    margin-top: 25px;
+    float: left;
+    width: 280px;
+    height: fit-content;
+    min-height: 300px;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgba(100, 100, 100, 0.6);
+    border-radius: 5px;
+  }
+  .profilePage .profile-Menu p {
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    background-color: #caccce;
+    border-bottom: 2px solid #a1a6aa;
+    border-radius: 5px 5px 0 0;
+    font-family: Catamaran;
+    font-size: 24px;
+    font-weight: 600;
+    color: #494d50;
+    text-shadow: 1px 1px 2px rgba(36, 38, 41, 0.4);
+  }
+  .profilePage .profile-Menu ul li {
+    width: 253px;
+    height: 45px;
+    margin: 5px 10px;
+    padding: 0 5px 0 0;
+    list-style: none;
+    background-color: #DBDCDD;
+    border: 1px solid #BBB;
+    border-radius: 5px;
+    line-height: 45px;
+  }
+  .profilePage .profile-Menu ul li.active {
+    background-color: #ffa366;
+  }
+  .profilePage .profile-Menu ul li a {
+    text-decoration: none;
+    display: block;
+    margin-left: 5px;
+    font-family: Catamaran;
+    font-size: 20px;
+    font-weight: 400;
+    color: #61676b;
+  }
+  .profilePage .profile-Menu ul li img {
+    margin-right: 5px;
+    margin-left: -6px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    background-color: #bdc0c1;
+    border: 1px solid #96999c;
+    border-radius: 5px 0 0 5px;
+    padding: 7px 7px;
+  }
+  .profilePage .profile-Menu ul li.active img {
+    background-color: #ff8533;
+  }
+  .profilePage .profile-Main{
+    margin-top: 25px;
+    float: left;
+    width: 700px;
+    height: fit-content;
+    min-height: 500px;
+    margin-left: 16px;
+  }
+  .profilePage .profile-Main .personal-data .row {
+    clear:both;
+  }
+  .profilePage .profile-Main .personal-data .text {
+    width: 120px;
+    height: 30px;
+    float: left;
+    margin-bottom: 5px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgba(255, 194, 153, 0.7);
+    border: 1px solid rgba(204, 82, 0, 0.6);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px #331400;
+  }
+  .profilePage .profile-Main .personal-data .data {
+    width: fit-content;
+    height: 30px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    line-height: 30px;
+    background-color: #DBDCDD;
+    border: 1px solid #BBB;
+    border-radius: 5px;
+    float: left;
+    font-family: Catamaran;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .profilePage .profile-Main .introduction .title {
+    width: 680px;
+    height: 40px;
+    margin: 0 10px;
+    background-color: #666;
+    border: 1px solid #444;
+    border-radius: 5px;
+    line-height: 40px;
+  }
+  .profilePage .profile-Main .introduction .title h1 {
+    padding-left: 15px;
+    font-family: Catamaran;
+    font-size: 22px;
+    color: var(--color-webOrangeLight);
+    text-shadow: 1px 1px 2px var(--color-webOrangeDark);
+  }
+  .profilePage .profile-Main .introduction .text {
+    width: 610px;
+    height: fit-content;
+    margin: 5px 20px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid var(--color-DefBorder);
+    border-radius: 5px;
+    padding: 25px;
+    font-family: Catamaran;
+    color: #333;
+  }
+
+  /* USER SETTINGS */
+  /* MAIN */
+  .settingsPage .settings-Main {
+    width: 700px;
+    margin: 25px auto;
+  }
+  .settingsPage .settings-Main .row {
+    clear:both;
+  }
+  .settingsPage .settings-Main .title {
+    width: 100%;
+    height: 40px;
+    background-color: #666;
+    border: 1px solid #444;
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .settingsPage .settings-Main .title h1 {
+    font-family: Catamaran;
+    font-size: 22px;
+    color: var(--color-webOrangeLight);
+    text-shadow: 1px 1px 2px var(--color-webOrangeDark);
+  }
+  .settingsPage .settings-Main .buttons {
+    margin: 5px auto;
+    text-align: center;
+  }
+  .settingsPage .settings-Main .personal .buttons {
+    width: calc(80px * 5);
+  }
+  .settingsPage .settings-Main .lists .buttons {
+    width: calc(80px * 4);
+  }
+  .settingsPage .settings-Main .admin .buttons {
+    width: calc(80px * 4);
+  }
+  .settingsPage .settings-Main .delete .buttons {
+    width: calc(80px * 1);
+  }
+  .settingsPage .settings-Main .buttons input {
+    width: 70px;
+    height: 70px;
+    margin: 0 5px;
+    float: left;
+    background-color: rgba(140, 140, 140, 0.6);
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 50px;
+  }
+  .settingsPage .settings-Main .buttons input:hover {
+    border-color: var(--color-webOrangeLight);
+  }
+
+
+  .settingsPage .btn-back {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-color: #595959;
+    border: 1px solid #444;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+  }
+  .settingsPage .btn-back img {
+    width: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  .settingsPage .settings-Personal .title,
+  .settingsPage .settings-ChangePwd .title,
+  .settingsPage .settings-ChangeAvatar .title,
+  .settingsPage .settings-ChangeIntroduction .title,
+  .settingsPage .settings-ManageNews .title,
+  .settingsPage .settings-ManageCategories .title {
+    float: left;
+    width: 656px;
+    height: 40px;
+    background-color: #666;
+    border: 1px solid #444;
+    border-radius: 0 5px 5px 0;
+    line-height: 40px;
+    text-align: center;
+  }
+  .settingsPage .settings-Personal .title h1,
+  .settingsPage .settings-ChangePwd .title h1,
+  .settingsPage .settings-ChangeAvatar .title h1,
+  .settingsPage .settings-ChangeIntroduction .title h1,
+  .settingsPage .settings-ManageNews .title h1,
+  .settingsPage .settings-ManageCategories .title h1 {
+    font-family: Catamaran;
+    font-size: 22px;
+    color: var(--color-webOrangeLight);
+    text-shadow: 1px 1px 2px var(--color-webOrangeDark);
+  }
+  .settingsPage .settings-Personal,
+  .settingsPage .settings-ChangePwd,
+  .settingsPage .settings-ChangeAvatar,
+  .settingsPage .settings-ChangeIntroduction,
+  .settingsPage .settings-ManageNews,
+  .settingsPage .settings-ManageCategories {
+    width: 700px;
+    margin: 25px auto;
+  }
+  /* PERSONAL */
+  /* CHANGE PASSWORD */
+  .settingsPage .settings-ChangePwd form {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding: 0;
+  }
+  .settingsPage .settings-ChangePwd form input.original {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+  .settingsPage .settings-ChangePwd form input.new {
+    margin-bottom: 5px;
+  }
+  .settingsPage .settings-ChangePwd form input {
+    width: 250px;
+  }
+
+  /* CHANGE AVATAR */
+  .settingsPage .settings-ChangeAvatar form {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .settingsPage .settings-ChangeAvatar form img {
+    margin-top: 30px;
+    width: 100px;
+    padding: 5px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+  }
+  .settingsPage .settings-Main .row {
+    clear:both;
+  }
+  .settingsPage .settings-ChangeAvatar form .row {
+    clear:both;
+    margin: 0 35px;
+  }
+  .settingsPage .settings-ChangeAvatar form p {
+    width: 80px;
+    margin: 5px auto;
+    padding: 5px 10px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+  }
+  .settingsPage .settings-ChangeAvatar form .text {
+    width: 90px;
+    margin: 2px auto;
+    padding: 5px 10px;
+    background-color: rgb(180, 180, 180);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    float: left;
+  }
+  .settingsPage .settings-ChangeAvatar form .data {
+    width: 90px;
+    margin: 2px auto;
+    padding: 5px 10px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+    float: right;
+  }
+  .settingsPage .settings-ChangeAvatar form input {
+    margin-top: 20px;
+  }
+
+  /* CHANGE INTRODUCTION */
+  .settings-ChangeIntroduction form {
+    text-align: center;
+  }
+  .settings-ChangeIntroduction form input {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .settings-ChangeIntroduction form button {
+    margin-top: 10px;
+  }
+
+
+  /* ADMIN NEWS */
+  .settingsPage .settings-ManageNews {
+    width: 1000px;
+  }
+  .settingsPage .settings-ManageNews .title {
+    width: 914px;
+    float: left;
+    border-radius: 0;
+  }
+
+  .settingsPage .btn-add{
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-color: #595959;
+    border: 1px solid #444;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+  }
+  .settingsPage .btn-add img {
+    width: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  .settingsPage .settings-ManageNews .table {
+    width: 1000px;
+  }
+  .settingsPage .settings-ManageNews .table .column {
+    width: 98px;
+    margin-top: 30px;
+    margin: 0 1px;
+    margin-top: 5px;
+    float:left;
+    text-align: center;
+  }
+  .settingsPage .settings-ManageNews .table .row p {
+    padding: 5px 0;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+  }
+  .settingsPage .settings-ManageNews .table .rowHided p {
+    padding: 5px 0;
+    background-color: rgb(200, 200, 200);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+  }
+  .settingsPage .settings-ManageNews .table .header .column {
+    width: 98px;
+    margin-top: 30px;
+    margin: 0 1px;
+    margin-top: 30px;
+    float:left;
+    text-align: center;
+  }
+  .settingsPage .settings-ManageNews .table .column.Cid {
+    width: 30px;
+  }
+  .settingsPage .settings-ManageNews .table .column.Ctitle {
+    width: 316px;
+  }
+  .settingsPage .settings-ManageNews .table .column.Cauthor {
+    width: 173px;
+  }
+  .settingsPage .settings-ManageNews .table .column.Ccategory {
+    width: 123px;
+  }
+  .settingsPage .settings-ManageNews .table .column.Cmanage {
+    width: 148px;
+  }
+  .settingsPage .settings-ManageNews .table .row .Cmanage {
+    float: left;
+    width: 146px;
+    padding: 5px 0;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-webOrangeLight);
+  }
+  .settingsPage .settings-ManageNews .table .rowHided .Cmanage {
+    float: left;
+    width: 146px;
+    padding: 5px 0;
+    background-color: rgb(200, 200, 200);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-webOrangeLight);
+  }
+  .settingsPage .settings-ManageNews .table .row .Cmanage form button,
+  .settingsPage .settings-ManageNews .table .rowHided .Cmanage form button {
+    width: fit-content;
+    height: 15px;
+    margin: 0;
+    margin-left: 8px;
+    padding: 0;
+    padding-bottom: 5px;
+    line-height: 15px;
+    text-align: center;
+    float: left;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+    font-family: Catamaran;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-webOrangeLight);
+  }
+  .settingsPage .settings-ManageNews .table .header p {
+    padding: 5px 0;
+    background-color: rgb(180, 180, 180);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  #aPageConfirmNewsDelete .container {
+    width: 500px;
+    margin: 80px auto;
+    text-align: center;
+  }
+  #aPageConfirmNewsDelete form {
+    margin: 10px auto;
+    text-align: center;
+  }
+  #aPageConfirmNewsDelete .yes button {
+    width: 60px;
+    margin-left: calc(250px - 60px);
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+    float:left;
+  }
+  #aPageConfirmNewsDelete .no button {
+    width: 60px;
+    float:left;
+    border-radius: 0 5px 5px 0;
+  }
+  #aPageConfirmNewsDelete .container p {
+    font-family: Catamaran;
+    font-size: 28px;
+    color: rgb(240, 240, 240);
+  }
+
+
+
+  /* ADMIN CATEGORIES*/
+  .settingsPage .settings-ManageCategories .title {
+    width: 614px;
+    float: left;
+    border-radius: 0;
+  }
+  .settingsPage .settings-ManageCategories .table {
+    width: 700px;
+  }
+  .settingsPage .settings-ManageCategories .table .column {
+    width: 173px;
+    margin-top: 30px;
+    margin: 0 1px;
+    margin-top: 5px;
+    float:left;
+    text-align: center;
+  }
+  .settingsPage .settings-ManageCategories .table p {
+    padding: 5px 0;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+  }
+  .settingsPage .settings-ManageCategories .table .header .column {
+    width: 173px;
+    margin-top: 30px;
+    margin: 0 1px;
+    margin-top: 30px;
+    float:left;
+    text-align: center;
+  }
+  .settingsPage .settings-ManageCategories .table .row .Cmanage {
+    float: left;
+    width: 171px;
+    padding: 5px 0;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-webOrangeLight);
+  }
+  .settingsPage .settings-ManageCategories .table .row .Cmanage a {
+    text-decoration: none;
+    font-family: Catamaran;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-webOrangeLight);
+  }
+  .settingsPage .settings-ManageCategories .table .header p {
+    padding: 5px 0;
+    background-color: rgb(180, 180, 180);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+  .settingsPage .settings-ManageCategories .hoverme {
+    cursor: pointer;
+  }
+
+
+  #aPageConfirmCategoryDelete .container {
+    width: 500px;
+    margin: 80px auto;
+    text-align: center;
+  }
+  #aPageConfirmCategoryDelete form {
+    margin: 10px auto;
+    text-align: center;
+  }
+  #aPageConfirmCategoryDelete .yes button {
+    width: 60px;
+    margin-left: calc(250px - 60px);
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+    float:left;
+  }
+  #aPageConfirmCategoryDelete .no button {
+    width: 60px;
+    float:left;
+    border-radius: 0 5px 5px 0;
+  }
+  #aPageConfirmCategoryDelete .container p {
+    font-family: Catamaran;
+    font-size: 28px;
+    color: rgb(240, 240, 240);
+  }
+
+
+
+  /* ADMIN ADD CATEGORY */
+  .pageAddCategory form {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  .pageAddCategory form input {
+    margin: 3px 0;
+  }
+  .pageAddCategory form button {
+    margin-top: 10px;
+  }
+
+  /* VIEW COMMENTS*/
+  .writenewsPage .news-main {
+    width: 800px;
+    margin-bottom: 5px;
+  }
+
+  .writenewsPage .pageManager {
+    width: 800px;
+    height: 30px;
+    margin: 0 100px;
+    margin-bottom: 10px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid var(--color-DefBorder);
+    border-radius: 5px;
+  }
+  .writenewsPage .pageManager ul li {
+    float: right;
+    list-style: none;
+    margin-top: -1px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid rgb(220, 220, 220);
+    border-right-color: rgb(180, 180, 180);
+    border-left: none;
+  }
+  .writenewsPage .pageManager ul li.active a {
+    background-color: #666;
+    color: var(--color-webOrangeLight);
+  }
+  .writenewsPage .pageManager ul li span {
+    height: 20px;
+    line-height: 20px;
+  }
+  .writenewsPage .pageManager ul li:first-child {
+    margin-right: 10px;
+  }
+  .writenewsPage .pageManager ul li:last-child {
+    border-left: 1px solid rgb(180, 180, 180);
+  }
+  .writenewsPage .pageManager ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 0 20px;
+    background-color: rgba(220, 220, 220);
+    font-family: Catamaran;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--color-webOrangeDark);
+  }
+
+  .nTwo {
+    margin-top: 50px;
+  }
+
+  .commentsMainBody {
+    width: 790px;
+    margin: 0 100px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid var(--color-DefBorder);
+    border-radius: 5px;
+    padding: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .commentsMainBody .header {
+    display: block;
+    height: 35px;
+    background-color: #777;
+    border-radius: 5px;
+    line-height: 35px;
+    padding-left: 10px;
+  }
+  .commentsMainBody .header h2 {
+    font-family: Catamaran;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-LightFont);
+  }
+  .commentsMainBody .header span {
+    color: #e09252;
+    font-weight: 500;
+  }
+
+  .commentBody {
+    margin-top: 15px;
+    width: 800px;
+  }
+
+  .commentsMainBody .row {
+    float: left;
+    margin-bottom: 10px;
+    width: 788px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+  }
+  .commentBody .authorProfile {
+    width: 120px;
+    float: left;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .commentBody .authorProfile .commentDate {
+    font-family: Catamaran;
+    font-size: 14px;
+    margin: 0 15px;
+    padding: 5px 0;
+    color: #444;
+    background-color: rgb(220, 220, 220);
+    border: 1px solid #777;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+  }
+  .commentBody .authorProfile .authorName {
+    font-family: Catamaran;
+    font-size: 14px;
+    padding: 5px 0;
+    margin: 3px 0;
+    color: var(--color-LightFont);
+    background-color: #888;
+    border-radius: 5px;
+  }
+  .commentBody .authorProfile img {
+    width: 80px;
+    padding: 2px 4px;
+    background-color: rgb(220, 220, 220);
+    border: 1px solid #777;
+    border-radius: 0 0 5px 5px;
+  }
+  .commentBody .authorProfile form button {
+    width: 110px;
+    height: 20px;
+    font-size: 12px;
+  }
+  .commentBody .commentText {
+    width: 640px;
+    float: right;
+    margin: 5px 20px 5px 0;
+    padding: 5px;
+    background-color: rgb(160, 160, 160);
+    border-radius: 5px;
+    display: block;
+    height: auto;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-wrap: normal;
+    word-break: break-all;
+    white-space: normal;
+    font-family: Catamaran;
+    font-size: 15px;
+    color: var(--color-LightFont);
+  }
+
+  .writeComment {
+    width: 790px;
+    margin: 10px 100px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid var(--color-DefBorder);
+    border-radius: 5px;
+    padding: 5px;
+    word-break: break-all;
+    white-space: normal;
+  }
+  .writeComment .header {
+    display: block;
+    height: 35px;
+    background-color: #777;
+    border-radius: 5px;
+    line-height: 35px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+  }
+  .writeComment .header h2 {
+    font-family: Catamaran;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-LightFont);
+  }
+  .writeComment .header span {
+    color: #e09252;
+    font-weight: 500;
+  }
+  .writeComment form button {
+    float: right;
+    margin: 5px;
+  }
+
+
+
+  /* PRIVATE MESSAGES PAGE */
+  .messagesPage .messages-Menu,
+  .friendsPage .friends-Menu {
+    margin-top: 25px;
+    padding-bottom: 10px;
+    float: left;
+    width: 260px;
+    height: fit-content;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgba(100, 100, 100, 0.6);
+    border-radius: 5px;
+  }
+  .messagesPage .messages-Menu p,
+  .friendsPage .friends-Menu p {
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    background-color: #caccce;
+    border-bottom: 2px solid #a1a6aa;
+    border-radius: 5px 5px 0 0;
+    font-family: Catamaran;
+    font-size: 24px;
+    font-weight: 600;
+    color: #494d50;
+    text-shadow: 1px 1px 2px rgba(36, 38, 41, 0.4);
+  }
+  .messagesPage .messages-Menu ul li,
+  .friendsPage .friends-Menu ul li {
+    width: 233px;
+    height: 45px;
+    margin: 5px 10px;
+    padding: 0 5px 0 0;
+    list-style: none;
+    background-color: #DBDCDD;
+    border: 1px solid #BBB;
+    border-radius: 5px;
+    line-height: 45px;
+  }
+  .messagesPage .messages-Menu ul li.active,
+  .friendsPage .friends-Menu ul li.active {
+    background-color: #ffa366;
+  }
+  .messagesPage .messages-Menu ul li a,
+  .friendsPage .friends-Menu ul li a {
+    text-decoration: none;
+    display: block;
+    margin-left: 5px;
+    font-family: Catamaran;
+    font-size: 20px;
+    font-weight: 400;
+    color: #61676b;
+  }
+  .messagesPage .messages-Menu ul li img,
+  .friendsPage .friends-Menu ul li img {
+    margin-right: 5px;
+    margin-left: -6px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    background-color: #bdc0c1;
+    border: 1px solid #96999c;
+    border-radius: 5px 0 0 5px;
+    padding: 7px 7px;
+  }
+  .messagesPage .messages-Menu ul li.active img,
+  .friendsPage .friends-Menu ul li.active img {
+    background-color: #ff8533;
+  }
+  .messagesPage .messages-Main{
+    float: left;
+    width: 710px;
+  }
+  .messagesPage .messages-Main .title {
+    width: 700px;
+    margin-top: 25px;
+    margin-left: 10px;
+    padding-left: 10px;
+    background-color: rgb(150, 150, 150);
+    border: 1px solid rgb(120, 120, 120);
+    border-radius: 5px;
+    line-height: 40px;
+    font-family: Catamaran;
+    font-size: 22px;
+    color: var(--color-LightFont);
+  }
+  .messagesPage .messages-Main .title span {
+    color: #ffa366;
+  }
+  .messagesPage .table {
+    width: 700px;
+    margin-left: 15px;
+  }
+  .messagesPage .table .header .column {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 1px;
+    margin-bottom: 5px;
+    background-color: rgb(200, 200, 200);
+    border: 1px solid rgb(140, 140, 140);
+    border-radius: 5px;
+    text-align: center;
+    font-family: Catamaran;
+    font-size: 18px;
+    color: #333;
+  }
+  .messagesPage .table .column.cDate {
+    width: 110px;
+  }
+  .messagesPage .table .column.cAuthor {
+    width: 160px;
+  }
+  .messagesPage .table .column.cSubject {
+    width: 270px;
+  }
+  .messagesPage .table .column.cManage {
+    width: 144px;
+  }
+  .messagesPage .table .row .column {
+    float: left;
+    height: 23px;
+    line-height: 23px;
+    margin: 0 1px;
+    margin-bottom: 2px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 5px;
+    text-align: center;
+    font-family: Catamaran;
+    font-size: 14px;
+    color: #333;
+  }
+  .messagesPage .table .row .cManage {
+    float: left;
+    white-space: nowrap;
+  }
+  .messagesPage .table .row .cManage form button {
+    width: fit-content;
+    height: 15px;
+    margin: 0;
+    margin-left: 6px;
+    padding: 0;
+    padding-bottom: 5px;
+    line-height: 23px;
+    text-align: center;
+    float: left;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+    font-family: Catamaran;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-webOrangeLight);
+  }
+
+  #aPageConfirmMessageDelete .container {
+    width: 500px;
+    margin: 80px auto;
+    text-align: center;
+  }
+  #aPageConfirmMessageDelete form {
+    margin: 10px auto;
+    text-align: center;
+  }
+  #aPageConfirmMessageDelete .yes button {
+    width: 60px;
+    margin-left: calc(250px - 60px);
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+    float:left;
+  }
+  #aPageConfirmMessageDelete .no button {
+    width: 60px;
+    float:left;
+    border-radius: 0 5px 5px 0;
+  }
+  #aPageConfirmMessageDelete .container p {
+    font-family: Catamaran;
+    font-size: 28px;
+    color: rgb(240, 240, 240);
+  }
+
+  .messages-Write {
+    height: 500px;
+    overflow: hidden;
+  }
+  .messages-Write form {
+    width: 500px;
+    margin: 10px 100px;
+    text-align: center;
+  }
+  .messages-Write form input {
+    width: 300px;
+    margin: 5px 0;
+  }
+  .messages-Write textarea {
+    resize: vertical;
+    width: 450px;
+    max-height: 300px;
+    padding: 5px;
+    background-color: var(--color-Button);
+    border: 1px solid var(--color-DefBorder);
+    border-radius: 5px;
+    font-family: Catamaran;
+    font-size: 16px;
+    color: var(--color-LightFont);
+  }
+  .messages-Write table {
+    width: 300px;
+    margin: 10px 110px;
+  }
+  .messages-Write table tr td {
+    width: 250px;
+    font-family: Catamaran;
+    font-size: 24px;
+    color: #444;
+  }
+  .messages-Write table tr td.ck {
+    width: 50px;
+  }
+  .messages-Write table tr td.ck input {
+    font-family: Catamaran;
+    font-size: 24px;
+    color: #444;
+    width: 50px;
+  }
+
+  .messages-Read {
+    width: 690px;
+    margin: 20px 20px;
+  }
+  .messages-Read .info {
+    float: left;
+    width: 280px;
+    overflow: hidden;
+  }
+  .messages-Read .message {
+    float: left;
+    width: 350px;
+
+  }
+  .messages-Read .subjectText,
+  .messages-Read .textText {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin-top: 5px;
+    background-color: #888;
+    border: 1px solid #777;
+    border-radius: 5px 0 0 5px;
+    line-height: 35px;
+    text-align: center;
+    font-family: Catamaran;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(220, 220, 220);
+  }
+  .messages-Read .subjectData {
+    float: left;
+    width: fit-content;
+    min-width: 60px;
+    height: 35px;
+    padding: 0 10px;
+    margin-top: 5px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid #777;
+    border-radius: 0 5px 5px 0;
+    line-height: 35px;
+    font-family: Catamaran;
+    font-size: 19px;
+    color: #666;
+  }
+  .messages-Read .textText {
+    width: 410px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+  }
+  .messages-Read .textData {
+    float: left;
+    width: 400px;
+    padding: 5px;
+    background-color: rgb(100, 100, 100);
+    background-color: rgb(240, 240, 240);
+    border: 1px solid #777;
+    border-radius: 0 0 5px 5px;
+    font-family: Catamaran;
+    font-size: 19px;
+    color: #666;
+  }
+
+  /* FRIENDS PAGE */
+  .friendsPage .friends-Main{
+    float: left;
+    width: 710px;
+  }
+  .friendsPage .friends-Main .title {
+    width: 700px;
+    margin-top: 25px;
+    margin-left: 10px;
+    padding-left: 10px;
+    background-color: rgb(150, 150, 150);
+    border: 1px solid rgb(120, 120, 120);
+    border-radius: 5px;
+    line-height: 40px;
+    font-family: Catamaran;
+    font-size: 22px;
+    color: var(--color-LightFont);
+  }
+  .friendsPage .friends-Main .title span {
+    color: #ffa366;
+  }
+  .friendsPage .table {
+    width: 700px;
+    margin-left: 15px;
+  }
+  .friendsPage .table .header .column {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 1px;
+    margin-bottom: 5px;
+    background-color: rgb(200, 200, 200);
+    border: 1px solid rgb(140, 140, 140);
+    border-radius: 5px;
+    text-align: center;
+    font-family: Catamaran;
+    font-size: 18px;
+    color: #333;
+  }
+  .friendsPage .table .column.cDate {
+    width: 110px;
+  }
+  .friendsPage .table .column.cName {
+    width: 160px;
+  }
+  .friendsPage .table .column.cState {
+    width: 220px;
+  }
+  .friendsPage .table .column.cManage {
+    width: 194px;
+  }
+  .friendsPage .table .row .column {
+    float: left;
+    height: 23px;
+    line-height: 23px;
+    margin: 0 1px;
+    margin-bottom: 2px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 5px;
+    text-align: center;
+    font-family: Catamaran;
+    font-size: 14px;
+    color: #333;
+  }
+  .friendsPage .table .row.bold .column {
+    background-color: rgba(252, 202, 168, 0.8);
+    border: 1px solid rgb(202, 148, 112);
+  }
+  .friendsPage .table .row .cManage {
+    float: left;
+    white-space: nowrap;
+  }
+  .friendsPage .table .row .cManage form button {
+    width: fit-content;
+    height: 15px;
+    margin: 0;
+    margin-left: 6px;
+    padding: 0;
+    padding-bottom: 5px;
+    line-height: 23px;
+    text-align: center;
+    float: left;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+    font-family: Catamaran;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-webOrangeLight);
+  }
+  #aPageConfirmFriendDelete .container {
+    width: 500px;
+    margin: 80px auto;
+    text-align: center;
+  }
+  #aPageConfirmFriendDelete form {
+    margin: 10px auto;
+    text-align: center;
+  }
+  #aPageConfirmFriendDelete .yes button {
+    width: 60px;
+    margin-left: calc(250px - 60px);
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+    float:left;
+  }
+  #aPageConfirmFriendDelete .no button {
+    width: 60px;
+    float:left;
+    border-radius: 0 5px 5px 0;
+  }
+  #aPageConfirmFriendDelete .container p {
+    font-family: Catamaran;
+    font-size: 28px;
+    color: rgb(240, 240, 240);
+  }
+
+  .friendsPage .friends-Add form {
+    width: 200px;
+    margin: 10px 250px;
+    text-align: center;
+  }
+  .friendsPage .friends-Add form input {
+    margin: 5px 0;
+  }
+}
